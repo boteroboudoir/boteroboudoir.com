@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botero Boudoir</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Times+New+Roman&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Times New Roman', 'Playfair Display', serif;
             margin: 0;
             padding: 0;
             background-color: #fff;
-            color: #1b36bc;
+            color: #060b94;
         }
 
         header {
@@ -31,28 +31,40 @@
 
         section {
             padding: 30px 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-section {
+            background-color: #0a3ab1;
+            color: white;
+            padding: 40px 20px;
             text-align: center;
         }
 
-        .contact-info {
-            font-size: 1.2em;
-            margin-top: 30px;
-        }
-
-        .contact-info a {
-            text-decoration: none;
-            color: #1f4b7a;
-        }
-
-        .social-links {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-
-        .social-links a {
-            text-decoration: none;
-            color: #1d23cb;
-            margin: 0 10px;
+        .contact-section h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
         footer {
@@ -63,39 +75,83 @@
             font-size: 1em;
             margin-top: 50px;
         }
-
-        .main-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
     </style>
 </head>
 <body>
 
     <header>
         Botero Boudoir
-        <h2>Grasping the essence of seduction, in the near future...</h2>
+        <h2>Grasping the essence of seduction</h2>
     </header>
 
     <section class="main-content">
-        <p>Welcome to Botero Boudoir, where we capture the sensual, the alluring, and the timeless beauty in every shot. My photography speaks to the inner strength and intimacy of my clients, and I will soon be available for session bookings in New York, and Medellin, Colombia.</p>
+        <p>Welcome to Botero Boudoir, where we capture the sensual, the alluring, and the timeless beauty in every shot. Our photography speaks to the inner strength and intimacy of clients, and we're now accepting session bookings in New York, New York, and Medellin, Colombia.</p>
 
-        <div class="contact-info">
-            <p>For collaboration and questions, please contact us at:</p>
-            <p>Email: <a href="mailto:boteroboudoir@gmail.com">boteroboudoir@gmail.com</a></p>
-            <p>Phone: <a href="tel:+17173242315">+1 (717) 324-2315</a></p>
-        </div>
+        <div class="gallery" id="gallery"></div>
+    </section>
 
-        <div class="social-links">
-            <p>Follow us on:</p>
-            <a href="https://www.instagram.com/boteroboudoir" target="_blank">Instagram</a> | 
-            <a href="https://twitter.com/BoteroBoudoir" target="_blank">X (Twitter)</a>
-        </div>
+    <section class="contact-section">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:boteroboudoir@gmail.com" style="color: white; text-decoration: underline;">boteroboudoir@gmail.com</a></p>
+        <p>Phone: <a href="tel:+17173246283" style="color: white; text-decoration: underline;">+1 (717) 324-6283</a></p>
+        <p>View our social page at: <a href="https://www.instagram.com/boteroboudoir" target="_blank" style="color: white; text-decoration: underline;">Instagram</a></p>
     </section>
 
     <footer>
         <p>&copy; 2024 Botero Boudoir. All rights reserved.</p>
+        <p>&copy; Website designed and developed by the cyber angel, www.thecyberangeloftheinter.net </p>
     </footer>
+
+    <script>
+        // Load images dynamically from a folder
+        const gallery = document.getElementById('gallery');
+        const imageFolder = '/Users/naharabotero/Desktop/Botero%20Boudoir%20Catalog'; // Replace with your folder path
+
+        // Assuming images are in a file structure and have simple file names
+        const images = [
+            'image1.jpg',
+            'image2.jpg',
+            'image3.jpg',
+            'image4.jpg',
+            'image5.jpg'
+            'image6.jpg'
+            'image7.jpg'
+            'image8.jpg'
+            'image9.jpg'
+            'image10.jpg'
+            'image11.jpg'
+            'image12.jpg'
+            'image13.jpg'
+            'image14.jpg'
+            'image15.jpg'
+            'image16.jpg'
+            'image17.jpg'
+            'image18.jpg'
+            'image19.jpg'
+            'image20.jpg'
+            'image21.jpg'
+            'image22.jpg'
+            'image23.jpg'
+            'image24.jpg'
+            'image25.jpg'
+            'image26.jpg'
+            'image27.jpg'
+            'image28.jpg'
+            'image29.jpg'
+            'image30.jpg'
+            'image31.jpg'
+            'image32.jpg'
+            'image33.jpg'
+            'image34.jpg'
+        ];
+        
+        images.forEach(image => {
+            const img = document.createElement('img');
+            img.src = `${imageFolder}/${image}`;
+            img.alt = "Botero Boudoir Image";
+            gallery.appendChild(img);
+        });
+    </script>
 
 </body>
 </html>
