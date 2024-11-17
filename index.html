@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botero Boudoir</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Times+New+Roman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700" rel="stylesheet">
     <style>
         body {
-            font-family: 'Times New Roman', serif;
+            font-family: 'Playfair Display', serif;
             margin: 0;
             padding: 0;
             background-color: #fff;
@@ -18,20 +18,20 @@
             background-color: #051fa3;
             color: white;
             text-align: center;
-            padding: 80px 20px;
-            font-size: 3em; /* Larger text for header */
+            padding: 80 px 20 px;
+            font-size: 3 em; /* Larger text for header */
             font-weight: 700; /* Bold */
         }
 
         h2 {
-            font-size: 1.8em;
-            margin-top: 20px;
+            font-size: 2 em;
+            margin-top: 20 px;
             font-weight: 400;
         }
 
         section {
-            padding: 60px 20px;
-            margin-bottom: 40px; /* Increased spacing between sections */
+            padding: 60 px 20 px;
+            margin-bottom: 40 px; /* Increased spacing between sections */
         }
 
         .gallery {
@@ -86,7 +86,7 @@
     </header>
 
     <section class="main-content">
-        <p>Welcome to Botero Boudoir, where we capture the sensual, the alluring, and the timeless beauty in every shot. Our photography speaks to the inner strength and intimacy of clients, and we're now accepting session bookings in New York, New York, and Medellin, Colombia.</p>
+        <p>Welcome to Botero Boudoir, where we capture the sensual, the alluring, and the timeless beauty in every shot. Our photography speaks to the inner strength and intimacy of clients, and we're now accepting session bookings in New York, New York, and Medellin, Colombia. For a limited time only, we are taking sessions in Las Vegas, Nevada.</p>
     </section>
 
     <!-- Gallery Section -->
@@ -94,68 +94,65 @@
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <h3>Contact Us</h3>
+        <h3>Schedule a Session with Us</h3>
         <p>Email: <a href="mailto:boteroboudoir@gmail.com" style="color: white; text-decoration: underline;">boteroboudoir@gmail.com</a></p>
         <p>Phone: <a href="tel:+17173246283" style="color: white; text-decoration: underline;">+1 (717) 324-6283</a></p>
-        <p>View our social page at: <a href="https://www.instagram.com/boteroboudoir" target="_blank" style="color: white; text-decoration: underline;">Instagram</a></p>
+        <p>Instagram (DM): <a href="https://www.instagram.com/boteroboudoir" target="_blank" style="color: white; text-decoration: underline;">Instagram</a></p>
+        <p>Additional social pages have us listed under the same username, @boteroboudoir. Feel free to reach out to us on any platform. </p>
     </section>
 
     <footer>
         <p>&copy; 2024 Botero Boudoir. All rights reserved.</p>
-        <p>&copy; Website designed and developed by the cyber angel, www.thecyberangeloftheinter.net </p>
+        <p>Website designed and developed by the cyber angel, www.thecyberangeloftheinter.net </p>
     </footer>
 
     <script>
-        // Load images dynamically from a folder
-        const gallery = document.getElementById('gallery');
-        const imageFolder = '/Users/naharabotero/Desktop/Botero%20Boudoir%20Catalog'; // Replace with your folder path
+    // Load images dynamically from Cloudinary
+    const gallery = document.getElementById('gallery');
+    const images = [
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817282/image29_vgvjlu.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817282/image33_tpbuiq.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817283/image34_auod3p.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817282/image19_o2lt6u.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817282/image32_kdisyy.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817282/image31_qazxzr.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817281/image30_c3gbji.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817281/image25_gbm1dv.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817280/image27_psxklr.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817280/image28_w9gbas.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817279/image24_jx3kdg.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817279/image6_kk3zls.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817278/image26_dvdyqf.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817276/image20_x4carb.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817275/image17_zvanns.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817275/image12_kzlnjm.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817274/image23_l8aps2.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817272/image18_x1jx1e.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817269/image16_hfruiu.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817269/image14_sf0ljs.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817268/image15_dtmbwk.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817268/image3_u8nwqw.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817267/image13_kqihi3.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817265/image10_iabr3y.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817265/image11_vzgjtn.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817262/image21_nzhgaw.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817262/image22_ermppa.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817262/image4_fgexqb.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817261/image1_ar8lkg.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817260/image9_iy2wfo.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817258/image2_xt9flv.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817257/image5_qmmj6y.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817256/image8_zam9i3.jpg',
+        'https://res.cloudinary.com/de7sm1aak/image/upload/v1731817253/image7_xwq2g5.jpg'
+    ];
 
-        // List of images to display (ensure there are commas separating each image)
-        const images = [
-            'image1.jpg',
-            'image2.jpg',
-            'image3.jpg',
-            'image4.jpg',
-            'image5.jpg',
-            'image6.jpg',
-            'image7.jpg',
-            'image8.jpg',
-            'image9.jpg',
-            'image10.jpg',
-            'image11.jpg',
-            'image12.jpg',
-            'image13.jpg',
-            'image14.jpg',
-            'image15.jpg',
-            'image16.jpg',
-            'image17.jpg',
-            'image18.jpg',
-            'image19.jpg',
-            'image20.jpg',
-            'image21.jpg',
-            'image22.jpg',
-            'image23.jpg',
-            'image24.jpg',
-            'image25.jpg',
-            'image26.jpg',
-            'image27.jpg',
-            'image28.jpg',
-            'image29.jpg',
-            'image30.jpg',
-            'image31.jpg',
-            'image32.jpg',
-            'image33.jpg',
-            'image34.jpg'
-        ];
-
-        // Dynamically create images and add to the gallery section
-        images.forEach(image => {
-            const img = document.createElement('img');
-            img.src = `${imageFolder}/${image}`;
-            img.alt = "Botero Boudoir Image";
-            gallery.appendChild(img);
-        });
-    </script>
+    images.forEach(image => {
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = "Botero Boudoir Image";
+        gallery.appendChild(img);
+    });
+</script>
 
 </body>
 </html>
